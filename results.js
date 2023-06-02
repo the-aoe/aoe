@@ -97,20 +97,20 @@ xhr.onreadystatechange = function() {
       var row = athleteTable.insertRow();
 
      var rankCell = row.insertCell();
-    if (index < 3) {
-    // Sử dụng biểu tượng huy chương tương ứng với vị trí đầu tiên, thứ hai và thứ ba
-    var medalIcon;
-    if (index === 0) {
-      medalIcon = '<i class="fa-sharp fa-light fa-medal"></i>';
-    } else if (index === 1) {
-      medalIcon = '<i class="fa-sharp fa-light fa-medal"></i>';
-    } else if (index === 2) {
-      medalIcon = '<i class="fa-sharp fa-light fa-medal"></i>';
-    }
-    rankCell.innerHTML = medalIcon;
-  } else {
-    rankCell.textContent = index + 1;
-  }
+      if (index < 3) {
+        // Sử dụng biểu tượng huy chương tương ứng với vị trí đầu tiên, thứ hai và thứ ba
+        var medalIcon;
+        if (index === 0) {
+          medalIcon = '<i class="fas fa-medal gold"></i>';
+        } else if (index === 1) {
+          medalIcon = '<i class="fas fa-medal silver"></i>';
+        } else if (index === 2) {
+          medalIcon = '<i class="fas fa-medal bronze"></i>';
+        }
+        rankCell.innerHTML = medalIcon;
+      } else {
+        rankCell.textContent = index + 1;
+      }
 
       var nameCell = row.insertCell();
       nameCell.textContent = athlete.name;
