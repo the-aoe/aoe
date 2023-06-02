@@ -103,7 +103,7 @@ xhr.onreadystatechange = function() {
         if (index === 0) {
           medalIcon = '<i class="fa-sharp fa-light fa-medal"></i>';
         } else if (index === 1) {
-          medalIcon = '<i class="fa-light fa-medal" style="color: #e5e4e1;"></i>';
+          medalIcon = '<i class="fal fa-medal"></i></i>';
         } else if (index === 2) {
           medalIcon = '<i class="fa-light fa-medal" style="color: #be8f04;"></i>';
         }
