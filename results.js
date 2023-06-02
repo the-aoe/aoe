@@ -3,7 +3,7 @@ const matches = [];
 
 var url = '/aoe/matches.json'; // Đường dẫn đến tệp JSON
 
-// Sử dụng XMLHttpRequest để tải tệp JSON
+// Sử dụng XMLHttpRequest hoặc Fetch API để tải tệp JSON
 var xhr = new XMLHttpRequest();
 xhr.open('GET', url, true);
 xhr.onreadystatechange = function() {
@@ -85,5 +85,11 @@ matches.forEach(match => {
 
 // Sắp xếp mảng athletes theo hiệu số thắng thua giảm dần
 athletes.sort((a, b) => b.goalDifference - a.goalDifference);
+  }
 };
 xhr.send();
+
+
+
+
+
