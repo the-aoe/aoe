@@ -1,0 +1,163 @@
+[
+    {
+      "id": "1",
+      "time": "05/01/2023",
+      "category": "Random",
+      "teamA": ["Bách", "Hưởng", "Thạch"],
+      "teamB": ["Tùng", "Trực", "Thế"],
+      "score": "5-1"
+    },
+    {
+      "id": "2",
+      "time": "09/01/2023",
+      "category": "Assyrian",
+      "teamA": ["Bách", "Hưởng", "Thạch"],
+      "teamB": ["Tùng", "Trực", "Thế"],
+      "score": "4-0"
+    },
+    {
+      "id": "3",
+      "time": "13/01/2023",
+      "category": "Random",
+      "teamA": ["Bách", "Thế", "Thạch"],
+      "teamB": ["Tùng", "Hưởng", "Dũng"],
+      "score": "4-2"
+    },
+    {
+      "id": "4",
+      "time": "06/02/2023",
+      "category": "Random",
+      "teamA": ["Tùng", "Thế", "Thạch"],
+      "teamB": ["Dũng", "Hưởng", "Trực"],
+      "score": "1-5"
+    },
+    {
+      "id": "5",
+      "time": "02/02/2023",
+      "category": "Random",
+      "teamA": ["Bách", "Thạch"],
+      "teamB": ["Hưởng", "Tùng"],
+      "score": "2-5"
+    },
+    {
+      "id": "6",
+      "time": "10/02/2023",
+      "category": "Random",
+      "teamA": ["Bách", "Thế", "Tùng"],
+      "teamB": ["Hưởng", "Trực", "Thạch"],
+      "score": "4-5"
+    },
+    {
+      "id": "7",
+      "time": "17/02/2023",
+      "category": "Random",
+      "teamA": ["Bách", "Thế", "Trực", "Thạch"],
+      "teamB": ["Hưởng", "Dũng", "Tùng", "Tuấn"],
+      "score": "1-4"
+    },
+    {
+      "id": "8",
+      "time": "20/02/2023",
+      "category": "Random",
+      "teamA": ["Bách", "Thế", "Trực", "Hưởng"],
+      "teamB": ["Thạch", "Dũng", "Tùng", "Tuấn"],
+      "score": "3-4"
+    },
+    {
+      "id": "9",
+      "time": "27/02/2023",
+      "category": "Random",
+      "teamA": ["Bách", "Thế", "Trực", "Hưởng"],
+      "teamB": ["Thạch", "Dũng", "Tùng", "Tuấn"],
+      "score": "4-3"
+    },
+    {
+      "id": "10",
+      "time": "10/03/2023",
+      "category": "Random",
+      "teamA": ["Thế", "Trực", "Hưởng"],
+      "teamB": ["Thạch", "Dũng", "Tùng"],
+      "score": "4-5"
+    },
+    {
+      "id": "11",
+      "time": "17/3/2023",
+      "category": "Random",
+      "teamA": ["Bách", "Thế", "Trực", "Hưởng"],
+      "teamB": ["Thạch", "Dũng", "Tùng", "Tuấn"],
+      "score": "3-5"
+    },
+    {
+      "id": "12",
+      "time": "18/3/2023",
+      "category": "Random",
+      "teamA": ["Thế", "Trực"],
+      "teamB": ["Thạch", "Tùng"],
+      "score": "3-5"
+    },
+    {
+      "id": "13",
+      "time": "24/3/2023",
+      "category": "Random",
+      "teamA": ["Bách", "Thế", "Tuấn"],
+      "teamB": ["Tùng", "Hưởng", "Thạch"],
+      "score": "4-5"
+    },
+    {
+      "id": "14",
+      "time": "29/3/2023",
+      "category": "Random",
+      "teamA": ["Bách", "Thạch", "Tuấn"],
+      "teamB": ["Tùng", "Hưởng", "Trực"],
+      "score": "5-1"
+    },
+    {
+      "id": "15",
+      "time": "31/3/2023",
+      "category": "Random",
+      "teamA": ["Trực"],
+      "teamB": ["Thạch"],
+      "score": "7-0"
+    },
+    {
+      "id": "16",
+      "time": "12/4/2023",
+      "category": "Random",
+      "teamA": ["Bách", "Tuấn"],
+      "teamB": ["Tùng", "Hưởng"],
+      "score": "5-1"
+    },
+    {
+      "id": "17",
+      "time": "13/4/2023",
+      "category": "Random",
+      "teamA": ["Thế", "Trực"],
+      "teamB": ["Dũng", "Hưởng"],
+      "score": "3-4"
+    },
+    {
+      "id": "18",
+      "time": "28/4/2023",
+      "category": "Random",
+      "teamA": ["Bách", "Thế", "Trực", "Hưởng"],
+      "teamB": ["Thạch", "Dũng", "Tùng", "Tuấn"],
+      "score": "0-5"
+    },
+    {
+      "id": "19",
+      "time": "11/5/2023",
+      "category": "Random",
+      "teamA": ["Bách", "Dũng", "Trực", "Thạch"],
+      "teamB": ["Hưởng", "Thế", "Tùng", "Tuấn"],
+      "score": "3-4"
+    },
+    {
+      "id": "20",
+      "time": "18/5/2023",
+      "category": "Random",
+      "teamA": ["Bách", "Dũng", "Trực", "Thạch"],
+      "teamB": ["Hưởng", "Thế", "Tùng", "Tuấn"],
+      "score": "4-3"
+    }
+  ]
+  
