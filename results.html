@@ -3,45 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kết quả thi đấu E-sport - Trang phụ</title>
+  <title>AOE Daiwa - Kết quả thi đấu E-sport</title>
   <link rel="stylesheet" href="results.css"> <!-- Sử dụng cùng tệp CSS như trang chính -->
   <style>
-    table.custom-table {
-      background-color: #333;
-      text-align: center;
-      margin: auto;
-      padding-bottom: 32px;
-      width: 80%;
-      border-collapse: collapse;
-    }
-
-    table.custom-table th, table.custom-table td {
-      text-align: center;
-      padding: 10px;
-      text-align: left;
-      border: 1px solid #ccc;
-      color: #333;
-    }
-
-    table.custom-table th {
-      background-color: #f2f2f2;
-      margin: 10px;
-    }
-
-    table.custom-table tr {
-      padding: 10px;
-    }
-
-    table.custom-table td {
-      vertical-align: top;
-      color: #ccc;
-    }
-
-    table.custom-table td, table.custom-table th {
-      text-align: center;
-      margin: 10px;
-      vertical-align: middle;
-    }
+    /* ... */
   </style>
 </head>
 <body>
@@ -52,14 +17,14 @@
       </nav>
       <h1>Bảng xếp hạng</h1>
     </header>
-  <table>
-    <tr>
-      <th>Tên</th>
-      <th>Số trận thắng</th>
-      <th>Số trận thua</th>
-      <th>Hiệu số thắng thua</th>
-    </tr>
-  </table>
+    <table id="athletes">
+      <tr>
+        <th>Tên</th>
+        <th>Số trận thắng</th>
+        <th>Số trận thua</th>
+        <th>Hiệu số thắng thua</th>
+      </tr>
+    </table>
   </div>
   <div class="all">
     <header>
@@ -80,32 +45,11 @@
           <!-- Dữ liệu về kết quả trận đấu sẽ được thêm vào đây bằng JavaScript -->
         </tbody>
       </table>
-  
-      <script src="results.js"></script>
-    <script>
-      // Lấy danh sách vận động viên từ biến athletes trong rank.js
-      athletes.forEach(athlete => {
-        const row = document.createElement("tr");
-        const nameCell = document.createElement("td");
-        nameCell.textContent = athlete.name;
-        row.appendChild(nameCell);
-        const winsCell = document.createElement("td");
-        winsCell.textContent = athlete.wins;
-        row.appendChild(winsCell);
-        const lossesCell = document.createElement("td");
-        lossesCell.textContent = athlete.losses;
-        row.appendChild(lossesCell);
-        const goalDifferenceCell = document.createElement("td");
-        goalDifferenceCell.textContent = athlete.goalDifference;
-        row.appendChild(goalDifferenceCell);
-        document.querySelector("table").appendChild(row);
-      });
-    </script>
-      </script>
     </main>
     <footer>
       <p>&copy; 2023 AOE Championship. All rights reserved.</p>
     </footer>
   </div>
+  <script src="results.js"></script>
 </body>
 </html>
