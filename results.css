@@ -118,7 +118,7 @@ table td, table th {
 
 /* CSS cho bảng xếp hạng */
 table {
-  width: 100%;
+/*   width: 100%; */
   border-collapse: collapse;
 }
 
