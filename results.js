@@ -1,4 +1,4 @@
-/// Mảng chứa thông tin kết quả trận đấu
+// Mảng chứa thông tin kết quả trận đấu
 const matches = [];
 
 var url = '/aoe/matches.json'; // Đường dẫn đến tệp JSON
@@ -57,7 +57,7 @@ xhr.onreadystatechange = function() {
             name: player,
             wins: parseInt(match.score[0]) > parseInt(match.score[2]) ? 1 : 0,
             losses: parseInt(match.score[0]) < parseInt(match.score[2]) ? 1 : 0,
-            goalDifference: athlete.wins - athlete.losses
+            goalDifference: parseInt(match.score[0]) - parseInt(match.score[2])
           });
         }
       });
@@ -77,7 +77,7 @@ xhr.onreadystatechange = function() {
             name: player,
             wins: parseInt(match.score[2]) > parseInt(match.score[0]) ? 1 : 0,
             losses: parseInt(match.score[2]) < parseInt(match.score[0]) ? 1 : 0,
-            goalDifference: parseInt(match.score[0]) - parseInt(match.score[2])
+            goalDifference: parseInt(match.score[2]) - parseInt(match.score[0])
           });
         }
       });
@@ -102,7 +102,7 @@ xhr.onreadystatechange = function() {
       lossesCell.textContent = athlete.losses;
 
       var goalDiffCell = row.insertCell();
-      goalDifference: parseInt(match.score[0]) - parseInt(match.score[2])
+      goalDiffCell.textContent = athlete.goalDifference;
     });
   }
 };
