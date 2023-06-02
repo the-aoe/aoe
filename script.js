@@ -49,30 +49,38 @@ function updateScheduleData() {
     row.appendChild(teamBCell);
 
     const statusCell = document.createElement('td');
-    const currentTime = new Date();
-    const startTime = new Date(schedule.time);
-    
-    if (currentTime > startTime) {
-      statusCell.textContent = 'Đã bắt đầu';
-    } else {
+    const startTime = new Date(schedule.time).getTime();
+
+    const updateCountdown = () => {
+      const currentTime = new Date().getTime();
       const countdown = startTime - currentTime;
-      const days = Math.floor(countdown / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((countdown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((countdown % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((countdown % (1000 * 60)) / 1000);
-      
-      if (days > 0) {
-        statusCell.textContent = `${days} Ngày ${hours}:${minutes}:${seconds}`;
+
+      if (countdown > 0) {
+        const days = Math.floor(countdown / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((countdown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((countdown % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((countdown % (1000 * 60)) / 1000);
+
+        if (days > 0) {
+          statusCell.textContent = `${days} Ngày ${hours}:${minutes}:${seconds}`;
+        } else {
+          statusCell.textContent = `${hours}:${minutes}:${seconds}`;
+        }
       } else {
-        statusCell.textContent = `${hours}:${minutes}:${seconds}`;
+        statusCell.textContent = 'Đã bắt đầu';
+        clearInterval(countdownInterval);
       }
-    }
-    
+    };
+
+    updateCountdown();
+    const countdownInterval = setInterval(updateCountdown, 1000);
+
     row.appendChild(statusCell);
 
     scheduleTableBody.appendChild(row);
   });
 }
+
 
 
 function updateResultsData() {
