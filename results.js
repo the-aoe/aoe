@@ -1,7 +1,7 @@
 // Mảng chứa thông tin kết quả trận đấu
 const matches = [];
 
-var url = '/aoe/matches.json'; // Đường dẫn đến tệp JSON
+var url = '/matches.json'; // Đường dẫn đến tệp JSON
 
 // Sử dụng XMLHttpRequest hoặc Fetch API để tải tệp JSON
 var xhr = new XMLHttpRequest();
@@ -38,58 +38,72 @@ xhr.onreadystatechange = function() {
     });
 
     // Tạo mảng chứa thông tin vận động viên
-const athletes = [];
+    const athletes = [];
 
-// Lặp qua các trận đấu và tính toán số trận thắng, thua và hiệu số thắng thua
-matches.forEach(match => {
-  // Đội nhà
-  match.teamA.forEach(player => {
-    const athlete = athletes.find(a => a.name === player);
-    if (athlete) {
-      if (parseInt(match.score[0]) > parseInt(match.score[2])) {
-        athlete.wins++;
-      } else if (parseInt(match.score[0]) < parseInt(match.score[2])) {
-        athlete.losses++;
-      }
-      athlete.goalDifference = athlete.wins - athlete.losses;
-    } else {
-      athletes.push({
-        name: player,
-        wins: parseInt(match.score[0]) > parseInt(match.score[2]) ? 1 : 0,
-        losses: parseInt(match.score[0]) < parseInt(match.score[2]) ? 1 : 0,
-        goalDifference: parseInt(match.score[0]) - parseInt(match.score[2])
+    // Lặp qua các trận đấu và tính toán số trận thắng, thua và hiệu số thắng thua
+    matches.forEach(match => {
+      // Đội nhà
+      match.teamA.forEach(player => {
+        const athlete = athletes.find(a => a.name === player);
+        if (athlete) {
+          if (parseInt(match.score[0]) > parseInt(match.score[2])) {
+            athlete.wins++;
+          } else if (parseInt(match.score[0]) < parseInt(match.score[2])) {
+            athlete.losses++;
+          }
+          athlete.goalDifference = athlete.wins - athlete.losses;
+        } else {
+          athletes.push({
+            name: player,
+            wins: parseInt(match.score[0]) > parseInt(match.score[2]) ? 1 : 0,
+            losses: parseInt(match.score[0]) < parseInt(match.score[2]) ? 1 : 0,
+            goalDifference: parseInt(match.score[0]) - parseInt(match.score[2])
+          });
+        }
       });
-    }
-  });
 
-  // Đội khách
-  match.teamB.forEach(player => {
-    const athlete = athletes.find(a => a.name === player);
-    if (athlete) {
-      if (parseInt(match.score[2]) > parseInt(match.score[0])) {
-        athlete.wins++;
-      } else if (parseInt(match.score[2]) < parseInt(match.score[0])) {
-        athlete.losses++;
-      }
-      athlete.goalDifference = athlete.wins - athlete.losses;
-    } else {
-      athletes.push({
-        name: player,
-        wins: parseInt(match.score[2]) > parseInt(match.score[0]) ? 1 : 0,
-        losses: parseInt(match.score[2]) < parseInt(match.score[0]) ? 1 : 0,
-        goalDifference: parseInt(match.score[2]) - parseInt(match.score[0])
+      // Đội khách
+      match.teamB.forEach(player => {
+        const athlete = athletes.find(a => a.name === player);
+        if (athlete) {
+          if (parseInt(match.score[2]) > parseInt(match.score[0])) {
+            athlete.wins++;
+          } else if (parseInt(match.score[2]) < parseInt(match.score[0])) {
+            athlete.losses++;
+          }
+          athlete.goalDifference = athlete.wins - athlete.losses;
+        } else {
+          athletes.push({
+            name: player,
+            wins: parseInt(match.score[2]) > parseInt(match.score[0]) ? 1 : 0,
+            losses: parseInt(match.score[2]) < parseInt(match.score[0]) ? 1 : 0,
+            goalDifference: parseInt(match.score[2]) - parseInt(match.score[0])
+          });
+        }
       });
-    }
-  });
-});
+    });
 
-// Sắp xếp mảng athletes theo hiệu số thắng thua giảm dần
-athletes.sort((a, b) => b.goalDifference - a.goalDifference);
+    // Sắp xếp vận động viên theo hiệu số thắng thua giảm dần
+    athletes.sort((a, b) => b.goalDifference - a.goalDifference);
+
+    // Hiển thị thông tin vận động viên
+    var athleteTable = document.getElementById("athletes");
+
+    athletes.forEach(athlete => {
+      var row = athleteTable.insertRow();
+
+      var nameCell = row.insertCell();
+      nameCell.textContent = athlete.name;
+
+      var winsCell = row.insertCell();
+      winsCell.textContent = athlete.wins;
+
+      var lossesCell = row.insertCell();
+      lossesCell.textContent = athlete.losses;
+
+      var goalDiffCell = row.insertCell();
+      goalDiffCell.textContent = athlete.goalDifference;
+    });
   }
 };
 xhr.send();
-
-
-
-
-
