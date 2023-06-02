@@ -57,7 +57,7 @@ xhr.onreadystatechange = function() {
             name: player,
             wins: parseInt(match.score[0]) > parseInt(match.score[2]) ? 1 : 0,
             losses: parseInt(match.score[0]) < parseInt(match.score[2]) ? 1 : 0,
-            goalDifference: parseInt(match.score[0]) - parseInt(match.score[2])
+            goalDifference: athlete.wins - athlete.losses
           });
         }
       });
@@ -77,7 +77,7 @@ xhr.onreadystatechange = function() {
             name: player,
             wins: parseInt(match.score[2]) > parseInt(match.score[0]) ? 1 : 0,
             losses: parseInt(match.score[2]) < parseInt(match.score[0]) ? 1 : 0,
-            goalDifference: parseInt(match.score[2]) - parseInt(match.score[0])
+            goalDifference: athlete.wins - athlete.losses
           });
         }
       });
