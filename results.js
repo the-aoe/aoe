@@ -77,7 +77,7 @@ xhr.onreadystatechange = function() {
             name: player,
             wins: parseInt(match.score[2]) > parseInt(match.score[0]) ? 1 : 0,
             losses: parseInt(match.score[2]) < parseInt(match.score[0]) ? 1 : 0,
-            goalDifference: athlete.wins - athlete.losses
+            goalDifference: parseInt(match.score[0]) - parseInt(match.score[2])
           });
         }
       });
@@ -102,7 +102,7 @@ xhr.onreadystatechange = function() {
       lossesCell.textContent = athlete.losses;
 
       var goalDiffCell = row.insertCell();
-      goalDiffCell.textContent = athlete.goalDifference;
+      goalDifference: parseInt(match.score[0]) - parseInt(match.score[2])
     });
   }
 };
