@@ -101,7 +101,7 @@ xhr.onreadystatechange = function() {
         // Sử dụng biểu tượng huy chương tương ứng với vị trí đầu tiên, thứ hai và thứ ba
         var medalIcon;
         if (index === 0) {
-          medalIcon = '<i class="fa-light fa-medal" style="color: #e9b807;"></i>';
+          medalIcon = '<i class="fa-sharp fa-light fa-medal"></i>';
         } else if (index === 1) {
           medalIcon = '<i class="fa-light fa-medal" style="color: #e5e4e1;"></i>';
         } else if (index === 2) {
