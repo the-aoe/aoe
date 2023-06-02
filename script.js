@@ -1,7 +1,7 @@
 // Dữ liệu lịch thi đấu
 const scheduleData = [
   {
-    time: 'Thứ 4 (31/5/2023 17:30)',
+    time: 'Thứ 2 (5/6/2023 17:30)',
     category: '4 vs 4',
     teamA: ['Dũng (C)', 'Tùng', 'Hưởng', 'Tuấn'],
     teamB: ['Trực (C)', 'Thế', 'Hải', 'Bách'],
