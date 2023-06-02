@@ -85,25 +85,5 @@ matches.forEach(match => {
 
 // Sắp xếp mảng athletes theo hiệu số thắng thua giảm dần
 athletes.sort((a, b) => b.goalDifference - a.goalDifference);
-
-    // Hiển thị thông tin vận động viên
-    var athleteTable = document.getElementById("athletes");
-
-    athletes.forEach(athlete => {
-      var row = athleteTable.insertRow();
-
-      var nameCell = row.insertCell();
-      nameCell.textContent = athlete.name;
-
-      var winsCell = row.insertCell();
-      winsCell.textContent = athlete.wins;
-
-      var lossesCell = row.insertCell();
-      lossesCell.textContent = athlete.losses;
-
-      var goalDiffCell = row.insertCell();
-      goalDiffCell.textContent = athlete.goalDifference;
-    });
-  }
 };
 xhr.send();
