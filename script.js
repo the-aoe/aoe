@@ -2,9 +2,9 @@
 const scheduleData = [
   {
     time: '2/6/2023 17:30',
-    category: '4 vs 4',
-    teamA: ['Dũng (C)', 'Tùng', 'Hưởng', 'Tuấn'],
-    teamB: ['Trực (C)', 'Thế', 'Hải', 'Bách'],
+    category: '2 vs 2',
+    teamA: ['Hưởng', 'Tuấn'],
+    teamB: ['Trực', 'Thế'],
   },
   // Thêm dữ liệu lịch thi đấu khác (nếu có)
 ];
