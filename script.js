@@ -51,6 +51,8 @@ function updateScheduleData() {
     const statusCell = document.createElement('td');
     const startTime = new Date(schedule.time).getTime();
 
+    let countdownInterval = null; // Khai báo biến countdownInterval và gán giá trị ban đầu là null
+
     const updateCountdown = () => {
       const currentTime = new Date().getTime();
       const countdown = startTime - currentTime;
@@ -73,7 +75,7 @@ function updateScheduleData() {
     };
 
     updateCountdown();
-    const countdownInterval = setInterval(updateCountdown, 1000);
+    countdownInterval = setInterval(updateCountdown, 1000); // Gán giá trị cho biến countdownInterval
 
     row.appendChild(statusCell);
 
@@ -120,4 +122,3 @@ window.addEventListener('DOMContentLoaded', function() {
   updateScheduleData();
   updateResultsData();
 });
-
