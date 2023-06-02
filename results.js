@@ -83,13 +83,12 @@ xhr.onreadystatechange = function() {
       });
     });
 
-    const retiredAthletes = ['Thạch', 'Bảo', 'Khanh'];
-
-    // Lọc và loại bỏ các vận động viên đã nghỉ hưu khỏi mảng athletes
-    const activeAthletes = athletes.filter(athlete => !retiredAthletes.includes(athlete.name));
-    
     // Sắp xếp vận động viên theo hiệu số thắng thua giảm dần
-    activeAthletes.sort((a, b) => b.goalDifference - a.goalDifference);
+    athletes.sort((a, b) => b.goalDifference - a.goalDifference);
+
+    // Loại bỏ các vận động viên đã nghỉ hưu khỏi mảng athletes
+    const retiredAthletes = ['Thạch', 'Bảo', 'Khanh'];
+    const activeAthletes = athletes.filter(athlete => !retiredAthletes.includes(athlete.name));
 
     // Hiển thị thông tin vận động viên
     var athleteTable = document.getElementById("athletes");
@@ -98,16 +97,16 @@ xhr.onreadystatechange = function() {
       var row = athleteTable.insertRow();
 
       var nameCell = row.insertCell();
-      nameCell.textContent = activeAthletes.name;
+      nameCell.textContent = athlete.name;
 
       var winsCell = row.insertCell();
-      winsCell.textContent = activeAthletes.wins;
+      winsCell.textContent = athlete.wins;
 
       var lossesCell = row.insertCell();
-      lossesCell.textContent = activeAthletes.losses;
+      lossesCell.textContent = athlete.losses;
 
       var goalDiffCell = row.insertCell();
-      goalDiffCell.textContent = activeAthletes.goalDifference;
+      goalDiffCell.textContent = athlete.goalDifference;
     });
   }
 };
