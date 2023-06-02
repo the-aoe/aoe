@@ -1,4 +1,4 @@
-// Mảng chứa thông tin kết quả trận đấu
+/// Mảng chứa thông tin kết quả trận đấu
 const matches = [];
 
 var url = '/aoe/matches.json'; // Đường dẫn đến tệp JSON
