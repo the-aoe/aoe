@@ -12,6 +12,7 @@ body {
 .all  {
   background-color: rgba(100, 100, 100, 0.8);
   margin: 64px;
+  padding-bottom: 32px;
 }
 
 header {
