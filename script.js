@@ -1,7 +1,7 @@
 // Dữ liệu lịch thi đấu
 const scheduleData = [
   {
-    time: 'Thứ 2 (5/6/2023 17:30)',
+    time: '2/6/2023 17:30',
     category: '4 vs 4',
     teamA: ['Dũng (C)', 'Tùng', 'Hưởng', 'Tuấn'],
     teamB: ['Trực (C)', 'Thế', 'Hải', 'Bách'],
@@ -12,7 +12,7 @@ const scheduleData = [
 // Dữ liệu kết quả trận đấu gần nhất
 const resultsData = [
   {
-    time: 'Thứ 4 (31/5/2023 17:30)',
+    time: '31/5/2023 17:30',
     category: '4 vs 4',
     teamA: ['Dũng (C)', 'Tùng', 'Hưởng', 'Tuấn'],
     teamB: ['Trực (C)', 'Thế', 'Hải', 'Bách'],
@@ -49,34 +49,13 @@ function updateScheduleData() {
     row.appendChild(teamBCell);
 
     const statusCell = document.createElement('td');
-    const startTime = new Date(schedule.time).getTime();
-
-    let countdownInterval = null; // Khai báo biến countdownInterval và gán giá trị ban đầu là null
-
-    const updateCountdown = () => {
-      const currentTime = new Date().getTime();
-      const countdown = startTime - currentTime;
-
-      if (countdown > 0) {
-        const days = Math.floor(countdown / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((countdown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((countdown % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((countdown % (1000 * 60)) / 1000);
-
-        if (days > 0) {
-          statusCell.textContent = `${days} Ngày ${hours}:${minutes}:${seconds}`;
-        } else {
-          statusCell.textContent = `${hours}:${minutes}:${seconds}`;
-        }
-      } else {
-        statusCell.textContent = 'Đã bắt đầu';
-        clearInterval(countdownInterval);
-      }
-    };
-
-    updateCountdown();
-    countdownInterval = setInterval(updateCountdown, 1000); // Gán giá trị cho biến countdownInterval
-
+    const startTime = moment(schedule.time, "D/M/YYYY HH:mm").toDate();
+    if (startTime <= new Date()) {
+      statusCell.textContent = 'Đã bắt đầu';
+    } else {
+      const countdown = moment(startTime).fromNow(true);
+      statusCell.textContent = countdown;
+    }
     row.appendChild(statusCell);
 
     scheduleTableBody.appendChild(row);
@@ -122,3 +101,40 @@ window.addEventListener('DOMContentLoaded', function() {
   updateScheduleData();
   updateResultsData();
 });
+
+
+
+function updateResultsData() {
+  const resultsTableBody = document.querySelector('#results-table tbody');
+  resultsTableBody.innerHTML = '';
+
+  resultsData.forEach((result) => {
+    const row = document.createElement('tr');
+
+    const timeCell = document.createElement('td');
+    timeCell.textContent = result.time;
+    row.appendChild(timeCell);
+
+    const categoryCell = document.createElement('td');
+    categoryCell.textContent = result.category;
+    row.appendChild(categoryCell);
+
+    const teamACell = document.createElement('td');
+    teamACell.innerHTML = result.teamA.join('<br>');
+    row.appendChild(teamACell);
+
+    const vsCell = document.createElement('td');
+    vsCell.textContent = 'VS';
+    row.appendChild(vsCell);
+
+    const teamBCell = document.createElement('td');
+    teamBCell.innerHTML = result.teamB.join('<br>');
+    row.appendChild(teamBCell);
+
+    const scoreCell = document.createElement('td');
+    scoreCell.textContent = result.score;
+    row.appendChild(scoreCell);
+
+    resultsTableBody.appendChild(row);
+  });
+}
