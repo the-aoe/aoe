@@ -1,7 +1,7 @@
 // Mảng chứa thông tin kết quả trận đấu
 const matches = [];
 
-var url = '/matches.json'; // Đường dẫn đến tệp JSON
+var url = '/aoe/matches.json'; // Đường dẫn đến tệp JSON
 
 // Sử dụng XMLHttpRequest để tải tệp JSON
 var xhr = new XMLHttpRequest();
