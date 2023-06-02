@@ -81,8 +81,6 @@ function updateScheduleData() {
   });
 }
 
-
-
 function updateResultsData() {
   const resultsTableBody = document.querySelector('#results-table tbody');
   resultsTableBody.innerHTML = '';
@@ -117,3 +115,9 @@ function updateResultsData() {
     resultsTableBody.appendChild(row);
   });
 }
+
+window.addEventListener('DOMContentLoaded', function() {
+  updateScheduleData();
+  updateResultsData();
+});
+
