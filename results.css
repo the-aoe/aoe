@@ -139,3 +139,15 @@ tr:hover {
   background-color: #ddd;
 } */
 
+.gold {
+  color: gold;
+}
+
+.silver {
+  color: silver;
+}
+
+.bronze {
+  color: #cd7f32; /* Màu đồng */
+}
+
