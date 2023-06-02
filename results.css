@@ -1,0 +1,116 @@
+/* CSS cho trang chính */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("img/aoe2.jpg");
+  background-size: cover; /* Đảm bảo ảnh phủ toàn bộ phần nền */
+  /* opacity: 0.6; */
+  /* filter: blur(5px); */
+}
+
+.all  {
+  background-color: rgba(100, 100, 100, 0.8);
+  margin: 64px;
+}
+
+header {
+  /* background-color: rgba(100, 100, 100, 0.8); */
+  color: #fff;
+  padding: 10px;
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 16px;
+  /* opacity: 1; */
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+nav a {
+  display: block;
+  margin: 16px;
+  color: #fff;
+  font-size: 18px;
+  /* text-decoration: none; */
+}
+
+main {
+  margin: 0;
+  /* background-color: rgba(100, 100, 100, 0.8); */
+  color: #fff;
+  padding-bottom: 16px;
+}
+
+section {
+  width: 100%;
+  padding: 16px;
+}
+
+table {
+  background-color: #333;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 32px;
+  width: 80%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: center;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td {
+  vertical-align: top;
+  color: #ccc;
+}
+
+table td, table th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.custom-table {
+  /* background-color: #333; */
+  text-align: center;
+  margin: auto;
+  padding-bottom: 32px;
+  width: 80%;
+  border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+  text-align: center;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.custom-table th {
+  background-color: #f2f2f2;
+}
+
+.custom-table td {
+  vertical-align: top;
+  color: #ccc;
+}
+
+.custom-table td,
+.custom-table th {
+  text-align: center;
+  vertical-align: middle;
+}
+
