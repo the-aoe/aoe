@@ -101,11 +101,11 @@ xhr.onreadystatechange = function() {
         // Sử dụng biểu tượng huy chương tương ứng với vị trí đầu tiên, thứ hai và thứ ba
         var medalIcon;
         if (index === 0) {
-          medalIcon = '<i class="fa-sharp fa-light fa-medal gold"></i>';
+          medalIcon = '<i class="fa-light fa-medal" style="color: #e9b807;"></i>';
         } else if (index === 1) {
-          medalIcon = '<i class="fa-sharp fa-light fa-medal silver"></i>';
+          medalIcon = '<i class="fa-light fa-medal" style="color: #e5e4e1;"></i>';
         } else if (index === 2) {
-          medalIcon = '<i class="fa-sharp fa-light fa-medal bronze"></i>';
+          medalIcon = '<i class="fa-light fa-medal" style="color: #be8f04;"></i>';
         }
         rankCell.innerHTML = medalIcon;
       } else {
