@@ -3,12 +3,10 @@ const matches = [];
 
 var url = '/aoe/matches.json'; // Đường dẫn đến tệp JSON
 
-// Sử dụng XMLHttpRequest hoặc Fetch API để tải tệp JSON
-var xhr = new XMLHttpRequest();
-xhr.open('GET', url, true);
-xhr.onreadystatechange = function() {
-  if (xhr.readyState === 4 && xhr.status === 200) {
-    var data = JSON.parse(xhr.responseText);
+// Sử dụng Fetch API để tải tệp JSON
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
     matches.push(...data); // Thêm dữ liệu từ JSON vào mảng matches
 
     // Tiếp tục xử lý dữ liệu ở đây
@@ -83,27 +81,3 @@ xhr.onreadystatechange = function() {
       });
     });
 
-    // Sắp xếp vận động viên theo hiệu số thắng thua giảm dần
-    athletes.sort((a, b) => b.goalDifference - a.goalDifference);
-
-    // Hiển thị thông tin vận động viên
-    var athleteTable = document.getElementById("athletes");
-
-    athletes.forEach(athlete => {
-      var row = athleteTable.insertRow();
-
-      var nameCell = row.insertCell();
-      nameCell.textContent = athlete.name;
-
-      var winsCell = row.insertCell();
-      winsCell.textContent = athlete.wins;
-
-      var lossesCell = row.insertCell();
-      lossesCell.textContent = athlete.losses;
-
-      var goalDiffCell = row.insertCell();
-      goalDiffCell.textContent = athlete.goalDifference;
-    });
-  }
-};
-xhr.send();
