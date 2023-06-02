@@ -189,7 +189,7 @@
 const matches = [
 
 ];
-var url = '\matches.JSON';
+var url = '\matches.json';
 
 // Sử dụng XMLHttpRequest hoặc Fetch API để tải tệp JSON
 var xhr = new XMLHttpRequest();
