@@ -93,8 +93,11 @@ xhr.onreadystatechange = function() {
     // Hiển thị thông tin vận động viên
     var athleteTable = document.getElementById("athletes");
 
-    activeAthletes.forEach(athlete => {
+    activeAthletes.forEach((athlete, index) => {
       var row = athleteTable.insertRow();
+
+      var rankCell = row.insertCell();
+      rankCell.textContent = index + 1;
 
       var nameCell = row.insertCell();
       nameCell.textContent = athlete.name;
