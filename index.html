@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AOE DAIWA</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .countdown {
+      font-weight: bold;
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <h1>Lịch thi đấu AOE Daiwa</h1>
@@ -55,7 +62,9 @@
     window.addEventListener('DOMContentLoaded', function() {
       updateScheduleData();
       updateResultsData();
+      startCountdown();
     });
   </script>
 </body>
+
 </html>
