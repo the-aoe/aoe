@@ -12,7 +12,7 @@ body {
 .all  {
   background-color: rgba(100, 100, 100, 0.8);
   margin: 64px;
-  padding-bottom: 32px;
+  padding-bottom: 16px;
 }
 
 header {
@@ -55,7 +55,6 @@ table {
   background-color: #333;
   text-align: center;
   margin: auto;
-  padding-bottom: 32px;
   width: 80%;
   border-collapse: collapse;
 }
@@ -80,6 +79,7 @@ td {
 table td, table th {
   text-align: center;
   vertical-align: middle;
+  padding-bottom: 16px;
 }
 
 .custom-table {
@@ -114,6 +114,8 @@ table td, table th {
   text-align: center;
   vertical-align: middle;
 }
+
+
 /* CSS cho bảng xếp hạng */
 table {
   width: 100%;
