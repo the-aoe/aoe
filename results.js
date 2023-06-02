@@ -101,11 +101,11 @@ xhr.onreadystatechange = function() {
         // Sử dụng biểu tượng huy chương tương ứng với vị trí đầu tiên, thứ hai và thứ ba
         var medalIcon;
         if (index === 0) {
-          medalIcon = '<i class="fas fa-medal gold"></i>';
+          medalIcon = '<i class="fa-sharp fa-light fa-medal gold"></i>';
         } else if (index === 1) {
-          medalIcon = '<i class="fas fa-medal silver"></i>';
+          medalIcon = '<i class="fa-sharp fa-light fa-medal silver"></i>';
         } else if (index === 2) {
-          medalIcon = '<i class="fas fa-medal bronze"></i>';
+          medalIcon = '<i class="fa-sharp fa-light fa-medal bronze"></i>';
         }
         rankCell.innerHTML = medalIcon;
       } else {
