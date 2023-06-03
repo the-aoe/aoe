@@ -1,9 +1,13 @@
 [
-    {
-      "time": "02/06/2023 17:30",
-      "category": "Random",
-      "teamA": ["Tuấn", "Hưởng"],
-      "teamB": ["Trực", "Thế"]
-    }
-  ]
+  {
+    "time": "03/06/2023 17:55",
+    "category": "Solo",
+    "teamA": [
+      "Dũng"
+    ],
+    "teamB": [
+      "Hưởng"
+    ]
+  }
+]
   
