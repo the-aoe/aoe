@@ -2,10 +2,29 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AOE DAIWA</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+<script>
+  // Đoạn mã cấu hình của bạn từ Firebase
+  var firebaseConfig = {
+    apiKey: "AIzaSyBsyyVQLVbNbapygMWVshMv6i_Bnluox-E",
+  authDomain: "aoe-storage.firebaseapp.com",
+  projectId: "aoe-storage",
+  storageBucket: "aoe-storage.appspot.com",
+  messagingSenderId: "662034419509",
+  appId: "1:662034419509:web:9abdbe88526d8eb5eb067c",
+  measurementId: "G-9W5N4W8DNC"
+  };
+
+  // Khởi tạo ứng dụng Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
   <style>
@@ -16,15 +35,95 @@
 </head>
 
 <body>
+
+  <!-- <button id="loadButton">Load Data</button>
+
+  <pre id="jsonData"></pre> -->
+
   <header>
     <h1>Lịch thi đấu AOE Daiwa</h1>
     <nav>
       <a href="results.html">Xem kết quả</a>
     </nav>
+
+    
+ <!-- Button để mở modal -->
+ <button id="openModal">Nhập lịch thi đấu</button>
+
+ <!-- Modal -->
+ <div id="myModal" class="modal">
+   <div class="modal-content">
+     <span class="close">&times;</span>
+     <form id="myForm">
+       <div class="form-group">
+         <label for="time">Thời gian:</label>
+         <input type="text" id="time" name="time" required>
+       </div>
+
+       <div class="form-group">
+         <label for="type">Thể loại:</label>
+         <select id="type" name="type" required>
+           <option value="Solo">Solo</option>
+           <option value="2 vs 2">2 vs 2</option>
+           <option value="3 vs 3">3 vs 3</option>
+           <option value="4 vs 4">4 vs 4</option>
+           <option value="Khác">Khác</option>
+         </select>
+         <input type="text" id="otherType" name="otherType" style="display: none;">
+       </div>
+
+       <div class="form-group">
+         <label for="teamA">Team A:</label>
+         <input type="text" id="teamA" name="teamA" required>
+       </div>
+
+       <div class="form-group">
+         <label for="teamB">Team B:</label>
+         <input type="text" id="teamB" name="teamB" required>
+       </div>
+
+       <button id="saveScheduleBtn" type="submit">Lưu</button>
+     </form>
+   </div>
+ </div>
+
+<!-- Button để mở modal Nhập tỷ số -->
+<button id="openScoreModalBtn">Nhập tỷ số</button>
+
+<!-- Modal Nhập tỷ số -->
+<div id="scoreModal" class="modal">
+  <div class="modal-content">
+    <span id="closeScoreBtn" class="close">&times;</span>
+    <!-- <h2>Nhập tỷ số</h2> -->
+    <form id="scoreForm">
+      <div>
+        <label for="timeInput">Thời gian:</label>
+        <input type="text" id="timeInput" placeholder="d/m/y h:m" required>
+      </div>
+      <div>
+        <label for="typeInput">Thể loại:</label>
+        <input type="text" id="typeInput" placeholder="Nhập thể loại" required>
+      </div>
+      <div>
+        <label for="teamAInput">Team A:</label>
+        <input type="text" id="teamAInput" placeholder="Nhập tên các VĐV Team A" required>
+      </div>
+      <div>
+        <label for="teamBInput">Team B:</label>
+        <input type="text" id="teamBInput" placeholder="Nhập tên các VĐV Team B" required>
+      </div>
+      <button id="saveScoreBtn" type="submit">Lưu</button>
+    </form>
+  </div>
+</div>
+
   </header>
 
   <main>
     <section>
+
+     
+
       <h2>Lịch thi đấu</h2>
       <table id="schedule-table">
         <thead>
@@ -41,7 +140,12 @@
       </table>
     </section>
 
+
+
     <section>
+
+
+
       <h2>Kết quả trận đấu gần nhất</h2>
       <table id="results-table">
         <thead>
