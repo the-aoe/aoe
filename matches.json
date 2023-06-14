@@ -198,5 +198,13 @@
     "teamA": ["Hưởng", "Tùng", "Dũng"],
     "teamB": ["Thế", "Trực", "Bách"],
     "score": "5-4"
+    },
+    {
+    "id":"26",
+    "time": "13/6/2023",
+    "category": "Assyryan",
+    "teamA": ["Hưởng", "Trực"],
+    "teamB": ["Thế", "Bách"],
+    "score": "2-4"
     }
   ]
