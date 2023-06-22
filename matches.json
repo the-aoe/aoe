@@ -214,5 +214,12 @@
     "teamA": ["Hưởng", "Tùng", "Dũng"],
     "teamB": ["Thế", "Trực", "Bách"],
     "score": "4-3"
-    }
+    },
+    {
+    "id":"28",
+    "time": "31/5/2023",
+    "category": "Random",
+    "teamA": ["Tùng", "Hưởng", "Dũng", "Tuấn"],
+    "teamB": ["Thế", "Trực", "Bách", "Hải"],
+    "score": "3-4"
   ]
