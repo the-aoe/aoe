@@ -223,4 +223,12 @@
     "teamB": ["Thế", "Trực", "Bách", "Hải"],
     "score": "3-4"
      }
+     {
+    "id":"29",
+    "time": "27/6/2023",
+    "category": "Random",
+    "teamA": ["Tùng", "Tuấn"],
+    "teamB": ["Bách", "Hưởng"],
+    "score": "4-5"
+     }
   ]
