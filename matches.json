@@ -270,17 +270,9 @@
     "teamA": ["Tùng","Tuấn"],
     "teamB": ["Bách", "Hải"],
     "score": "4-5"
-     },
+     }
      {
     "id":"35",
-    "time": "26/7/2023",
-    "category": "Random",
-    "teamA": ["Tùng","Tuấn"],
-    "teamB": ["Bách", "Hải"],
-    "score": "5-4"
-     },
-     {
-    "id":"36",
     "time": "26/7/2023",
     "category": "Random",
     "teamA": ["Tùng","Tuấn", "Hưởng"],
@@ -288,7 +280,7 @@
     "score": "4-3"
      },
      {
-    "id":"37",
+    "id":"36",
     "time": "3/8/2023",
     "category": "Random",
     "teamA": ["Tùng", "Dũng", "Tuấn"],
