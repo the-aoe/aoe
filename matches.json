@@ -302,5 +302,13 @@
     "teamA": ["Tùng","Tuấn"],
     "teamB": ["Bách", "Hải"],
     "score": "5-1"
+     },
+     {
+    "id":"39",
+    "time": "30/08/2023",
+    "category": "Random",
+    "teamA": ["Tùng","Tuấn"],
+    "teamB": ["Bách", "Hưởng"],
+    "score": "5-3"
      }
   ]
